@@ -710,6 +710,11 @@ USBCTRL_DPRAM:
     "EP*_IN_CONTROL,EP*_OUT_CONTROL":
         _start_from_zero: true
         name: "EP_CONTROL%s"
+  _derive:
+    "EPX_CONTROL":
+      _from: "EP1_IN_CONTROL"
+      addressOffset: 0x100
+      description: "EPx Control (Host-mode only!)"
 
 _add:
   SW_IRQ:
